@@ -23,3 +23,10 @@ sentence = "I want to vist Paris and Lonon next week."
 corrected_sentence = spell_corrector.correct_spelling(sentence)
 print(corrected_sentence)
 # Output: "I want to visit Paris and London next week."
+
+## Installation
+
+To install TripPlannerSpellCorrector, you can clone the repository:
+
+```bash
+git clone https://github.com/your_username/trip-planner-spell-corrector.git
