@@ -24,7 +24,7 @@ corrected_sentence = spell_corrector.correct_spelling(sentence)
 print(corrected_sentence)
 # Output: "I want to visit Paris and London next week."
 
-## Methods
+Methods
 
 ### 'correct_spelling(sentence: str) -> str'
 
@@ -46,7 +46,7 @@ print(corrected_sentence)
 
 - Returns the probability of a word being correct based on its presence in the NLTK word set.
 
-## Installation
+Installation
 
 To install TripPlannerSpellCorrector, you can clone the repository:
 
