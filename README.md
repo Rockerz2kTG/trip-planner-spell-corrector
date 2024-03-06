@@ -10,23 +10,43 @@ The get_word_suggestions method generates possible corrections for the misspelle
 The word_probability method returns the probability of a word being correct based on its presence in the NLTK word set.
 In the example usage section, the script demonstrates how to use the TripPlannerSpellCorrector class to correct the spelling of example sentences related to trip planning.
 
-### Usage
+# Trip Planner Spell Corrector
+
+The Trip Planner Spell Corrector is a Python script designed to identify and correct misspelled words in sentences related to trip planning. It utilizes natural language processing techniques to suggest corrections based on context and common trip planning terms.
+
+## Features
+
+- Corrects misspelled words in sentences related to trip planning.
+- Utilizes the NLTK corpus of English words for spell correction.
+- Considers context and common trip planning terms to enhance correction accuracy.
+
+## Usage
+
+1. Ensure you have Python installed on your system.
+2. Install the necessary dependencies by running: pip install nltk
+3. Download the NLTK English words corpus by running: python -m nltk.downloader words
+4. Copy the provided `trip_planner_spell_corrector.py` file into your project directory.
+5. Initialize a `TripPlannerSpellCorrector` object and use the `correct_spelling` method to correct misspelled sentences.
+
+### Example Usage
 
 ```python
 from trip_planner_spell_corrector import TripPlannerSpellCorrector
 
-# Initialize the spell corrector
 spell_corrector = TripPlannerSpellCorrector()
 
-# Example usage
-sentence = "I want to vist Paris and Lonon next week."
-corrected_sentence = spell_corrector.correct_spelling(sentence)
-print(corrected_sentence)
-# Output: "I want to visit Paris and London next week."
+# Example sentences with potential spelling errors
+sentences = [
+ "Planet a trip from louis well to colum bus",
+ "Plummeted from louis ville to lewisville airport",
+ "Planet krypton want to louisville to columbus",
+ "Go to dash board page"
+]
 
-## Installation
+# Correct the spelling of each sentence and print the result
+for sentence in sentences:
+ corrected_sentence = spell_corrector.correct_spelling(sentence)
+ print(f"Input: {sentence}")
+ print(f"Output: {corrected_sentence}")
 
-To install TripPlannerSpellCorrector, you can clone the repository:
 
-```bash
-git clone https://github.com/your_username/trip-planner-spell-corrector.git
